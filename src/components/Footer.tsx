@@ -109,10 +109,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+       {/* Bottom Bar */}
+        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-center items-center">
           <p className="text-sm text-muted-foreground flex items-center">
-            © {currentYear} Prince Kumar-portfolio. Made with{' '}
-            <span className="px-1">❤️</span> using React & Tailwind CSS
+            © 2025 Prince Kumar-portfolio. Made with using React & Tailwind CSS
           </p>
         </div>
       </div>
