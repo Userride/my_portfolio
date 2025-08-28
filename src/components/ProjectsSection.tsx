@@ -52,7 +52,7 @@ const ProjectsSection = () => {
       description:
         'Social Media Task allows users to submit their name, social media handle, and upload multiple images. Admin dashboard displays all user submissions with names, handles, and uploaded images.',
       previewImage: socialPreview,
-      technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Multer'],
+      technologies: ['React', 'Node.js', 'Express.js', 'MongoDB','Socket.io', 'Multer'],
       liveUrl: 'https://media-frontend-iota.vercel.app/',
       githubUrl: 'https://github.com/Userride/Social-Media-Task',
     },
