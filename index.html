@@ -20,85 +20,47 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/new.png" />
-
-    <style>
-      #ai-popup-message {
-        position: fixed;
-        bottom: 100px;
-        right: 25px;
-        background-color: rgb(228, 228, 235);
-        color: #4603ff;
-        padding: 15px 20px;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-        max-width: 280px;
-        font-family: "Inter", sans-serif;
-        font-size: 14px;
-        line-height: 1.5;
-        z-index: 9998;
-        opacity: 0;
-        transform: translateY(20px);
-        visibility: hidden;
-        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out,
-          visibility 0.4s;
-      }
-      #ai-popup-message::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        right: 20px;
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid white;
-      }
-      #ai-popup-message.visible {
-        opacity: 1;
-        transform: translateY(0);
-        visibility: visible;
-      }
-      .ai-popup-close {
-        position: absolute;
-        top: 5px;
-        right: 10px;
-        font-size: 24px;
-        color: #999999;
-        cursor: pointer;
-        font-weight: 300;
-      }
-      .ai-popup-close:hover {
-        color: #333;
-      }
-    </style>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- Botpress Chatbot -->
-    <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
-    <script
-      src="https://files.bpcontent.cloud/2025/08/26/07/20250826071453-ASFH089F.js"
-      defer
-    ></script>
-
-    <div id="ai-popup-message">
-      <span class="ai-popup-close" onclick="hideAIPopup()">&times;</span>
-      <strong>AI:</strong> Hi! I'm Prince's AI Friend. Ask me about his
-      experience, projects, or skills!
-    </div>
-
+    <!-- ✅ Chatbase Chatbot -->
     <script>
-      const aiPopup = document.getElementById("ai-popup-message");
-      function hideAIPopup() {
-        if (aiPopup) aiPopup.classList.remove("visible");
-      }
-      setTimeout(() => {
-        if (aiPopup) aiPopup.classList.add("visible");
-      }, 2000);
-      setTimeout(() => hideAIPopup(), 12000);
+      (function () {
+        if (
+          !window.chatbase ||
+          window.chatbase("getState") !== "initialized"
+        ) {
+          window.chatbase = (...arguments) => {
+            if (!window.chatbase.q) {
+              window.chatbase.q = [];
+            }
+            window.chatbase.q.push(arguments);
+          };
+          window.chatbase = new Proxy(window.chatbase, {
+            get(target, prop) {
+              if (prop === "q") {
+                return target.q;
+              }
+              return (...args) => target(prop, ...args);
+            },
+          });
+        }
+        const onLoad = function () {
+          const script = document.createElement("script");
+          script.src = "https://www.chatbase.co/embed.min.js";
+          script.id = "istXcl-LpaATEo13KVNWi"; <!-- 👈 replace with your real chatbot ID -->
+          script.domain = "www.chatbase.co";
+          document.body.appendChild(script);
+        };
+        if (document.readyState === "complete") {
+          onLoad();
+        } else {
+          window.addEventListener("load", onLoad);
+        }
+      })();
     </script>
   </body>
 </html>
