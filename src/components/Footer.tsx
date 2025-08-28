@@ -112,6 +112,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
+<<<<<<< HEAD
+=======
+       {/* Bottom Bar */}
+>>>>>>> 4a267f6a8278857528a46bf36570e67b49ebb4f0
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-center items-center">
           <p className="text-sm text-muted-foreground flex items-center">
             © 2025 Prince Kumar-portfolio. Made with using React & Tailwind CSS
