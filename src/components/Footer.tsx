@@ -20,27 +20,42 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-muted-foreground hover:text-primary">
+                <a
+                  href="#about"
+                  className="text-muted-foreground hover:text-primary"
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-muted-foreground hover:text-primary">
+                <a
+                  href="#projects"
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#skills" className="text-muted-foreground hover:text-primary">
+                <a
+                  href="#skills"
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Skills
                 </a>
               </li>
               <li>
-                <a href="#experience" className="text-muted-foreground hover:text-primary">
+                <a
+                  href="#experience"
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Experience
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-muted-foreground hover:text-primary">
+                <a
+                  href="#contact"
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Contact
                 </a>
               </li>
@@ -60,7 +75,7 @@ const Footer = () => {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com/in/prince-kumar-23b852252"
+                href="https://www.linkedin.com/in/prince-singh-891a1b279/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary"
@@ -68,7 +83,7 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://x.com/Princekr9226"
+                href="https://x.com/singh_prin34318"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary"
@@ -81,15 +96,15 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <p className="text-muted-foreground">📧 kumarprince9226@gmail.com</p>
-            <p className="text-muted-foreground">📍 India</p>
+            <p className="text-muted-foreground">📧 singhprince131074@gmail.com</p>
+            <p className="text-muted-foreground">📍samastipur,Bihar,India</p>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-center items-center">
           <p className="text-sm text-muted-foreground flex items-center">
-            © 2025 Prince Kumar-portfolio. Made with using React & Tailwind CSS
+            © 2025 Prince Kumar Portfolio. Built with React & Tailwind CSS
           </p>
         </div>
       </div>
