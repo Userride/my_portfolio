@@ -34,7 +34,7 @@ const ProjectsSection = () => {
       description:
         'Real-time messaging application with Socket.io supporting one-on-one and group chat functionality',
       previewImage: chatappPreview,
-      technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'JWT'],
+      technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'cloudinary' ,'JWT'],
       liveUrl: 'https://chat-frontend-psi-nine.vercel.app/',
       githubUrl: 'https://github.com/Userride/ChatApp',
     },
@@ -52,7 +52,7 @@ const ProjectsSection = () => {
       description:
         'Social Media Task allows users to submit their name, social media handle, and upload multiple images. Admin dashboard displays all user submissions with names, handles, and uploaded images.',
       previewImage: socialPreview,
-      technologies: ['React', 'Node.js', 'Express.js', 'MongoDB','Socket.io', 'Multer'],
+      technologies: ['React', 'Node.js', 'Express.js', 'MongoDB','Socket.io', 'Multer','cloudinary' ],
       liveUrl: 'https://media-frontend-iota.vercel.app/',
       githubUrl: 'https://github.com/Userride/Social-Media-Task',
     },
