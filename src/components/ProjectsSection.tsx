@@ -8,7 +8,7 @@ import chatappPreview from '@/assets/chat.png';
 import evdPreview from '@/assets/ml.png';
 import libraryPreview from '@/assets/library.png';
 import socialPreview from '@/assets/social.png'; // <-- add an image for Social Media Task
-
+//
 const ProjectsSection = () => {
   const projects = [
     {
