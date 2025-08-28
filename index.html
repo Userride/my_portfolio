@@ -10,24 +10,21 @@
     />
     <meta name="author" content="Prince Kumar" />
 
-<<<<<<< HEAD
-=======
     <!-- Google Fonts -->
->>>>>>> 4a267f6a8278857528a46bf36570e67b49ebb4f0
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-<<<<<<< HEAD
 
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/new.png" />
 
     <style>
       #ai-popup-message {
         position: fixed;
-        bottom: 100px; /* Position it above the default chatbot icon */
+        bottom: 100px;
         right: 25px;
         background-color: rgb(228, 228, 235);
         color: #4603ff;
@@ -38,15 +35,13 @@
         font-family: "Inter", sans-serif;
         font-size: 14px;
         line-height: 1.5;
-        z-index: 9998; /* Just below the chatbot's z-index */
-        opacity: 0; /* Initially hidden */
-        transform: translateY(20px); /* Start slightly lower for animation */
+        z-index: 9998;
+        opacity: 0;
+        transform: translateY(20px);
         visibility: hidden;
         transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out,
           visibility 0.4s;
       }
-
-      /* A small triangle to make it look like a speech bubble */
       #ai-popup-message::after {
         content: "";
         position: absolute;
@@ -58,15 +53,11 @@
         border-right: 10px solid transparent;
         border-top: 10px solid white;
       }
-
-      /* Class to show the popup with animation */
       #ai-popup-message.visible {
         opacity: 1;
         transform: translateY(0);
         visibility: visible;
       }
-
-      /* Close button ('×') styling */
       .ai-popup-close {
         position: absolute;
         top: 5px;
@@ -80,19 +71,13 @@
         color: #333;
       }
     </style>
-    </head>
-=======
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/new.png" />
   </head>
->>>>>>> 4a267f6a8278857528a46bf36570e67b49ebb4f0
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-<<<<<<< HEAD
+    <!-- Botpress Chatbot -->
     <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
     <script
       src="https://files.bpcontent.cloud/2025/08/26/07/20250826071453-ASFH089F.js"
@@ -101,70 +86,19 @@
 
     <div id="ai-popup-message">
       <span class="ai-popup-close" onclick="hideAIPopup()">&times;</span>
-      <strong>AI:</strong> Hi! I'm Prince's AI Friend's. Ask me about his
+      <strong>AI:</strong> Hi! I'm Prince's AI Friend. Ask me about his
       experience, projects, or skills!
     </div>
+
     <script>
       const aiPopup = document.getElementById("ai-popup-message");
-
-      // Function to hide the popup
       function hideAIPopup() {
-        if (aiPopup) {
-          aiPopup.classList.remove("visible");
-        }
+        if (aiPopup) aiPopup.classList.remove("visible");
       }
-
-      // Show the popup 2 seconds after the page loads
       setTimeout(() => {
-        if (aiPopup) {
-          aiPopup.classList.add("visible");
-        }
-      }, 2000); // 2000 milliseconds = 2 seconds
-
-      // Automatically hide the popup after 12 seconds
-      setTimeout(() => {
-        hideAIPopup();
-      }, 12000); // 12000 milliseconds = 12 seconds
-    </script>
-    </body>
-</html>
-=======
-    <!-- ✅ Chatbase Chatbot -->
-    <script>
-      (function () {
-        if (
-          !window.chatbase ||
-          window.chatbase("getState") !== "initialized"
-        ) {
-          window.chatbase = (...arguments) => {
-            if (!window.chatbase.q) {
-              window.chatbase.q = [];
-            }
-            window.chatbase.q.push(arguments);
-          };
-          window.chatbase = new Proxy(window.chatbase, {
-            get(target, prop) {
-              if (prop === "q") {
-                return target.q;
-              }
-              return (...args) => target(prop, ...args);
-            },
-          });
-        }
-        const onLoad = function () {
-          const script = document.createElement("script");
-          script.src = "https://www.chatbase.co/embed.min.js";
-          script.id = "istXcl-LpaATEo13KVNWi"; <!-- 👈 replace with your real chatbot ID -->
-          script.domain = "www.chatbase.co";
-          document.body.appendChild(script);
-        };
-        if (document.readyState === "complete") {
-          onLoad();
-        } else {
-          window.addEventListener("load", onLoad);
-        }
-      })();
+        if (aiPopup) aiPopup.classList.add("visible");
+      }, 2000);
+      setTimeout(() => hideAIPopup(), 12000);
     </script>
   </body>
 </html>
->>>>>>> 4a267f6a8278857528a46bf36570e67b49ebb4f0
