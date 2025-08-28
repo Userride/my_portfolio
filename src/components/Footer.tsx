@@ -1,4 +1,4 @@
-import { Heart, Github, Linkedin, Mail } from 'lucide-react';
+import { Heart, Github, Linkedin, Mail } from "lucide-react";
 import aboutBg from "@/assets/about.jpg";
 
 const Footer = () => {
@@ -6,32 +6,32 @@ const Footer = () => {
 
   const socialLinks = [
     {
-      name: 'GitHub',
+      name: "GitHub",
       icon: <Github className="h-4 w-4" />,
-      url: 'https://github.com/Userride'
+      url: "https://github.com/Userride",
     },
     {
-      name: 'LinkedIn',
+      name: "LinkedIn",
       icon: <Linkedin className="h-4 w-4" />,
-      url: 'https://www.linkedin.com/in/prince-singh-891a1b279/'
+      url: "https://www.linkedin.com/in/prince-singh-891a1b279/",
     },
     {
-      name: 'Email',
+      name: "Email",
       icon: <Mail className="h-4 w-4" />,
-      url: 'mailto:singhprince131074@gmail.com'
-    }
+      url: "mailto:singhprince131074@gmail.com",
+    },
   ];
 
   const quickLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' }
+    { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "Experience", href: "#experience" },
+    { name: "Skills", href: "#skills" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -39,19 +39,22 @@ const Footer = () => {
       className="border-t border-border bg-background/80 backdrop-blur-sm relative"
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url(${aboutBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
       }}
     >
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold text-gradient mb-4">Prince Kumar</h3>
+            <h3 className="text-2xl font-bold text-gradient mb-4">
+              Prince Kumar
+            </h3>
             <p className="text-muted-foreground mb-4 max-w-md">
-              Computer Science student passionate about building scalable full-stack applications 
-              and integrating AI solutions with modern web technologies.
+              Computer Science student passionate about building scalable
+              full-stack applications and integrating AI solutions with modern
+              web technologies.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -92,13 +95,13 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>Samastipur, Bihar</p>
               <p>India</p>
-              <a 
+              <a
                 href="mailto:singhprince131074@gmail.com"
                 className="hover:text-primary transition-colors"
               >
                 singhprince131074@gmail.com
               </a>
-              <a 
+              <a
                 href="tel:+916206920880"
                 className="hover:text-primary transition-colors block"
               >
@@ -109,10 +112,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-center items-center">
           <p className="text-sm text-muted-foreground flex items-center">
-            © {currentYear} Prince Kumar-portfolio. Made with{' '}
-            <span className="px-1">❤️</span> using React & Tailwind CSS
+            © 2025 Prince Kumar-portfolio. Made with using React & Tailwind CSS
           </p>
         </div>
       </div>

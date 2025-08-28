@@ -1,24 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prince Kumar-portfolio</title>
-  <meta name="description" content="Computer Science student at IIIT Kalyani specializing in MERN Stack development, AI integration, and real-time applications." />
-  <meta name="author" content="Prince Kumar" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prince Kumar - Portfolio</title>
+    <meta
+      name="description"
+      content="Computer Science student at IIIT Kalyani specializing in MERN Stack development, AI integration, and real-time applications."
+    />
+    <meta name="author" content="Prince Kumar" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- 👇 Add favicon logo -->
-  <link rel="icon" type="image/png" href="/new.png" />
-</head>
+    <link rel="icon" type="image/png" href="/new.png" />
 
+    <style>
+      #ai-popup-message {
+        position: fixed;
+        bottom: 100px; /* Position it above the default chatbot icon */
+        right: 25px;
+        background-color: rgb(228, 228, 235);
+        color: #4603ff;
+        padding: 15px 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        max-width: 280px;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        z-index: 9998; /* Just below the chatbot's z-index */
+        opacity: 0; /* Initially hidden */
+        transform: translateY(20px); /* Start slightly lower for animation */
+        visibility: hidden;
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out,
+          visibility 0.4s;
+      }
+
+      /* A small triangle to make it look like a speech bubble */
+      #ai-popup-message::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        right: 20px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid white;
+      }
+
+      /* Class to show the popup with animation */
+      #ai-popup-message.visible {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+      }
+
+      /* Close button ('×') styling */
+      .ai-popup-close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        font-size: 24px;
+        color: #999999;
+        cursor: pointer;
+        font-weight: 300;
+      }
+      .ai-popup-close:hover {
+        color: #333;
+      }
+    </style>
+    </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+    <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
+    <script
+      src="https://files.bpcontent.cloud/2025/08/26/07/20250826071453-ASFH089F.js"
+      defer
+    ></script>
+
+    <div id="ai-popup-message">
+      <span class="ai-popup-close" onclick="hideAIPopup()">&times;</span>
+      <strong>AI:</strong> Hi! I'm Prince's AI Friend's. Ask me about his
+      experience, projects, or skills!
+    </div>
+    <script>
+      const aiPopup = document.getElementById("ai-popup-message");
+
+      // Function to hide the popup
+      function hideAIPopup() {
+        if (aiPopup) {
+          aiPopup.classList.remove("visible");
+        }
+      }
+
+      // Show the popup 2 seconds after the page loads
+      setTimeout(() => {
+        if (aiPopup) {
+          aiPopup.classList.add("visible");
+        }
+      }, 2000); // 2000 milliseconds = 2 seconds
+
+      // Automatically hide the popup after 12 seconds
+      setTimeout(() => {
+        hideAIPopup();
+      }, 12000); // 12000 milliseconds = 12 seconds
+    </script>
+    </body>
 </html>
