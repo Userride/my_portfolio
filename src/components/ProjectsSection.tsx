@@ -6,6 +6,8 @@ import projectsBg from '@/assets/projects-bg.jpg';
 import eatfitPreview from '@/assets/eatfit.png';
 import chatappPreview from '@/assets/chat.png';
 import evdPreview from '@/assets/ml.png';
+import libraryPreview from '@/assets/library.png';
+import socialPreview from '@/assets/social.png'; // <-- add an image for Social Media Task
 
 const ProjectsSection = () => {
   const projects = [
@@ -17,6 +19,15 @@ const ProjectsSection = () => {
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Socket.io'],
       liveUrl: 'https://eat-fit-flame.vercel.app/',
       githubUrl: 'https://github.com/Userride/Food_App',
+    },
+    {
+      title: 'Library Management System',
+      description:
+        'Full-fledged MERN stack system with admin and student roles, book issue/return, late reminders via Twilio, and dashboards.',
+      previewImage: libraryPreview,
+      technologies: ['React', 'Node.js', 'Express.js', 'MongoDB'],
+      liveUrl: 'https://lib-frontend-umber.vercel.app/',
+      githubUrl: 'https://github.com/Userride/Library-Management',
     },
     {
       title: 'ChatApp',
@@ -35,6 +46,15 @@ const ProjectsSection = () => {
       technologies: ['Python', 'YOLOv5', 'OpenCV', 'Twilio', 'Flask'],
       liveUrl: 'https://majorprojectcse-3rdyear.streamlit.app/',
       githubUrl: 'https://github.com/Userride/Emergency-vehicle-detection',
+    },
+    {
+      title: 'Social Media Task',
+      description:
+        'Social Media Task allows users to submit their name, social media handle, and upload multiple images. Admin dashboard displays all user submissions with names, handles, and uploaded images.',
+      previewImage: socialPreview,
+      technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Multer'],
+      liveUrl: 'https://media-frontend-iota.vercel.app/',
+      githubUrl: 'https://github.com/Userride/Social-Media-Task',
     },
   ];
 
@@ -130,22 +150,21 @@ const ProjectsSection = () => {
           </div>
 
           <div className="text-center mt-12">
-           <Button
-  variant="outline"
-  size="lg"
-  className="hover-glow"
-  asChild
->
-  <a
-    href="https://github.com/Userride"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Github className="mr-2 h-4 w-4" />
-    View All Projects on GitHub
-  </a>
-</Button>
-
+            <Button
+              variant="outline"
+              size="lg"
+              className="hover-glow"
+              asChild
+            >
+              <a
+                href="https://github.com/Userride"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="mr-2 h-4 w-4" />
+                View All Projects on GitHub
+              </a>
+            </Button>
           </div>
         </div>
       </div>
