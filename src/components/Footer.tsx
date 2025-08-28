@@ -1,112 +1,120 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Heart, Github, Linkedin, Mail } from 'lucide-react';
+import aboutBg from "@/assets/about.jpg";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const socialLinks = [
+    {
+      name: 'GitHub',
+      icon: <Github className="h-4 w-4" />,
+      url: 'https://github.com/Userride'
+    },
+    {
+      name: 'LinkedIn',
+      icon: <Linkedin className="h-4 w-4" />,
+      url: 'https://www.linkedin.com/in/prince-singh-891a1b279/'
+    },
+    {
+      name: 'Email',
+      icon: <Mail className="h-4 w-4" />,
+      url: 'mailto:singhprince131074@gmail.com'
+    }
+  ];
+
+  const quickLinks = [
+    { name: 'About', href: '#about' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Contact', href: '#contact' }
+  ];
+
+  const scrollToSection = (href: string) => {
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <footer className="bg-background border-t border-border text-foreground py-12">
-      <div className="container mx-auto px-4">
-        {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* About Section */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Prince Kumar</h3>
-            <p className="text-muted-foreground">
-              Aspiring Backend Developer & Full Stack Engineer passionate about
-              building scalable solutions and impactful applications.
+    <footer
+      className="border-t border-border bg-background/80 backdrop-blur-sm relative"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url(${aboutBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-4 gap-8">
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <h3 className="text-2xl font-bold text-gradient mb-4">Prince Kumar</h3>
+            <p className="text-muted-foreground mb-4 max-w-md">
+              Computer Science student passionate about building scalable full-stack applications 
+              and integrating AI solutions with modern web technologies.
             </p>
+            <div className="flex space-x-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full border border-border hover:border-primary hover:text-primary transition-all hover-glow"
+                  aria-label={social.name}
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="#about"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#projects"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#skills"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  Skills
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#experience"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  Experience
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  Contact
-                </a>
-              </li>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <button
+                    onClick={() => scrollToSection(link.href)}
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    {link.name}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Social Links */}
+          {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Connect</h3>
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com/Userride"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary"
+            <h4 className="font-semibold mb-4">Contact</h4>
+            <div className="space-y-2 text-sm text-muted-foreground">
+              <p>Samastipur, Bihar</p>
+              <p>India</p>
+              <a 
+                href="mailto:singhprince131074@gmail.com"
+                className="hover:text-primary transition-colors"
               >
-                <Github className="h-5 w-5" />
+                singhprince131074@gmail.com
               </a>
-              <a
-                href="https://www.linkedin.com/in/prince-singh-891a1b279/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary"
+              <a 
+                href="tel:+916206920880"
+                className="hover:text-primary transition-colors block"
               >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="https://x.com/singh_prin34318"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary"
-              >
-                <Twitter className="h-5 w-5" />
+                +91-6206920880
               </a>
             </div>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <p className="text-muted-foreground">📧 singhprince131074@gmail.com</p>
-            <p className="text-muted-foreground">📍samastipur,Bihar,India</p>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-center items-center">
-          <p className="text-sm text-muted-foreground flex items-center">
-            © 2025 Prince Kumar Portfolio. Built with React & Tailwind CSS
-          </p>
-        </div>
+       {/* Bottom Bar */}
+<div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-center items-center">
+  <p className="text-sm text-muted-foreground flex items-center">
+    © 2025 Prince Kumar-portfolio. Made with using React & Tailwind CSS
+  </p>
+</div>
       </div>
     </footer>
   );
