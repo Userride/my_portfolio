@@ -59,14 +59,20 @@ const AboutSection = () => {
               {/* Quick Stats */}
               <div className="grid grid-cols-3 gap-4 pt-6">
                 <div className="text-center">
+                  <div className="text-2xl font-bold text-primary">8.56</div>
+                  <div className="text-sm text-muted-foreground">CGPA</div>
+                </div>
+                <div className="text-center">
                   <div className="text-2xl font-bold text-primary">500+</div>
                   <div className="text-sm text-muted-foreground">
                     LeetCode Problems
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">8.56</div>
-                  <div className="text-sm text-muted-foreground">CGPA</div>
+                  <div className="text-2xl font-bold text-primary">3+</div>
+                  <div className="text-sm text-muted-foreground">
+                    Major Projects
+                  </div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">3rd</div>
