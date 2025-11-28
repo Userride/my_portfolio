@@ -195,7 +195,7 @@ const ExperienceSection = () => {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Problems Solved</span>
-                      <span className="text-primary font-medium">500+</span>
+                      <span className="text-primary font-medium">700+</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Hackathon Volunteer</span>
