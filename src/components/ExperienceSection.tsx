@@ -95,7 +95,7 @@ const ExperienceSection = () => {
                     </div>
 
                     <div className="flex flex-col items-end gap-2">
-                      <a
+                      {/* <a
                         href={experience.website}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -103,7 +103,7 @@ const ExperienceSection = () => {
                       >
                         <ExternalLink className="w-4 h-4" />
                         Website
-                      </a>
+                      </a> */}
                       <Badge variant="outline" className="text-primary border-primary">
                         {experience.type}
                       </Badge>
@@ -190,8 +190,8 @@ const ExperienceSection = () => {
                   <h4 className="font-medium mb-3">Other Highlights</h4>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-muted-foreground">LeetCode Rating</span>
-                      <span className="text-primary font-medium">1740</span>
+                      <span className="text-muted-foreground">Contest Rating</span>
+                      <span className="text-primary font-medium">1740+</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Problems Solved</span>
