@@ -65,7 +65,7 @@ const AboutSection = () => {
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">700+</div>
                   <div className="text-sm text-muted-foreground">
-                    LeetCode Problems
+                    DSA Problems
                   </div>
                 </div>
                 <div className="text-center">
