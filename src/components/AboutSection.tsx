@@ -12,13 +12,12 @@ const AboutSection = () => {
     <section
       id="about"
       className="py-20 bg-muted/50 relative overflow-hidden"
-     style={{
-  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${aboutBg})`,
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  backgroundAttachment: "fixed",
-}}
-
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${aboutBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
     >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
@@ -59,8 +58,10 @@ const AboutSection = () => {
               {/* Quick Stats */}
               <div className="grid grid-cols-3 gap-4 pt-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">8.56</div>
-                  <div className="text-sm text-muted-foreground">CGPA</div>
+                  <div className="text-2xl font-bold text-primary">Bronze</div>
+                  <div className="text-sm text-muted-foreground">
+                    CodAcharya 7.0 (CP-DSA)
+                  </div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">700+</div>
@@ -69,10 +70,8 @@ const AboutSection = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">3+</div>
-                  <div className="text-sm text-muted-foreground">
-                    Major Projects
-                  </div>
+                  <div className="text-2xl font-bold text-primary">8.56</div>
+                  <div className="text-sm text-muted-foreground">CGPA</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">3rd</div>
