@@ -29,6 +29,12 @@ const ExperienceSection = () => {
       detail: 'Solved 17 advanced problems',
       icon: <Zap className="h-5 w-5" />
     },
+     {
+      title: "CodAcharya 7.0",
+      description: "Among 50 college teams",
+      detail: "Earned team Bronze Medal in CP-DSA problems",
+      icon: <Zap className="h-5 w-5" />,
+    },
     {
       title: 'HP LIFE Certified',
       description: 'Data Science & Analytics Certification',
